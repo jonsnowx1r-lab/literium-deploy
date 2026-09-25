@@ -1,0 +1,52 @@
+{
+  "id": "/",
+  "name": "LITERIUM | منصة ليتيريوم للأدب والفكر",
+  "short_name": "Literium",
+  "description": "منصة الفكر والأدب العربي، مقالات نخبة الكُتّاب، مكتبة رقمية، ومساعد ذكاء اصطناعي",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#0d9488",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "الصفحة الرئيسية لمنصة ليتيريوم"
+    },
+    {
+      "src": "/screenshots/desktop-1.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "الصفحة الرئيسية لمنصة ليتيريوم على الحاسوب"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "studio.ai.literium.literium_app",
+      "url": "https://literium-wjct.onrender.com/downloads/Literium.apk"
+    }
+  ],
+  "prefer_related_applications": false
+}
