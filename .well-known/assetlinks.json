@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "studio.ai.literium.literium_app",
+      "sha256_cert_fingerprints": [
+        "EF:99:75:54:81:DE:CF:EF:BB:FF:66:09:41:8F:02:9C:16:96:2A:37:F1:72:8C:A0:9D:79:AD:46:A7:5A:0E:59"
+      ]
+    }
+  }
+]

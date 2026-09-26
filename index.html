@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- interactive-widget=resizes-content: بدونها كانت لوحة المفاتيح على أندرويد
+         (متصفح أو التطبيق كـTWA) تُغطّي أسفل أي نافذة بارتفاع ثابت (كنافذة
+         تسجيل الدخول) دون أن يُعاد حساب المساحة المرئية الفعلية، فيختفي حقل
+         كلمة المرور وزر الإرسال خلف اللوحة بلا أي وسيلة لتمريرهما للظهور —
+         هذا ما أبلغ عنه المستخدم بالضبط ("الخانات مخفية بسبب لوحة المفاتيح"). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#0d9488" />
+    <!-- تحقق ملكية الموقع لشبكة Monetag (النسخة الخاصة بالناشرين من PropellerAds) -->
+    <meta name="monetag" content="bb537a0829c59e9fd612b87f53384943" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <title>LITERIUM | منصة ليتيريوم للأدب والمقالات ونخبة الكُتّاب</title>
+    <meta name="description" content="منصة أدبية وثقافية عربية متكاملة للقراء والكُتّاب مع المكتبة الرقمية والمساعد الذكي." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!--
+      شاشة بداية ثابتة (بلا أي جافاسكربت أو ملف CSS خارجي) — تُرسَم فوراً
+      بمجرد وصول أول بايتات من هذا الملف نفسه، قبل تحميل حزمة React بأكملها
+      (main.tsx) بوقت طويل. كان <div id="root"></div> فارغاً تماماً بلا أي
+      محتوى ثابت، فأي تأخر في التحميل (شبكة بطيئة، أو خادم Render لا يزال
+      يستيقظ من سبات) يعني شاشة فارغة قريبة من السواد (خلفية الوضع الداكن
+      #090d16 نفسها) بلا أي شعار أو مؤشر تحميل — هذا بالضبط ما وُصف بـ"الصفحة
+      السوداء". هذا لا يُلغي إطلاقاً أي انتظار يحدث قبل وصول أي بايتات من
+      الخادم أصلاً (تلك المرحلة خارج نطاق أي صفحة ويب مهما كانت — لا يمكن
+      رسم محتوى لصفحة لم تصل بعد)، لكنه يضمن أن أي جزء من الانتظار يحدث
+      بعد وصول هذا الملف نفسه (تحميل حزمة JS، تهيئة أولية) يظهر بهوية
+      المنصة الحقيقية بدل فراغ. React نفسه يستبدل هذا المحتوى تلقائياً
+      وبلا أي وميض عند التركيب (render يستبدل children الخاص بـ#root).
+    -->
+    <style>
+      .literium-boot-splash {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: #090d16;
+        font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+      }
+      .literium-boot-splash__mark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 72px;
+        border-radius: 22px;
+        background: rgba(13, 148, 136, 0.15);
+        border: 1px solid rgba(13, 148, 136, 0.35);
+      }
+      .literium-boot-splash__mark svg {
+        width: 36px;
+        height: 36px;
+        color: #2dd4bf;
+      }
+      .literium-boot-splash__title {
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+      }
+      .literium-boot-splash__spinner {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 3px solid rgba(45, 212, 191, 0.25);
+        border-top-color: #2dd4bf;
+        animation: literium-spin 0.8s linear infinite;
+      }
+      @keyframes literium-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-D-pM7HCt.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DkH8YmX7.css">
+  </head>
+  <body class="bg-[#f8fafc] text-slate-900 dark:bg-[#090d16] dark:text-slate-100 font-['Cairo','IBM_Plex_Sans_Arabic',sans-serif] antialiased selection:bg-teal-500 selection:text-white transition-colors duration-200">
+    <div id="root"><div class="literium-boot-splash">
+      <div class="literium-boot-splash__mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      </div>
+      <div class="literium-boot-splash__title">ليتيريوم</div>
+      <div class="literium-boot-splash__spinner"></div>
+    </div></div>
+  </body>
+</html>
+
